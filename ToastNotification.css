@@ -1,0 +1,136 @@
+﻿:root {
+    --toast-success: #48c78e;
+    --toast-error: #f14668;
+    --toast-info: #3e8ed0;
+    --toast-warning: #ffe08a;
+    --toast-text-dark: #212121;
+    --toast-text-light: #ffffff;
+}
+.toast-container {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+/* موقعیت‌ها */
+.toast-container-bottom-center {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+}
+
+.toast-container-top-center {
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+}
+
+.toast-container-top-left {
+    top: 20px;
+    left: 20px;
+    align-items: flex-start;
+}
+
+.toast-container-top-right {
+    top: 20px;
+    right: 20px;
+    align-items: flex-end;
+}
+
+.toast-container-bottom-left {
+    bottom: 20px;
+    left: 20px;
+    align-items: flex-start;
+}
+
+.toast-container-bottom-right {
+    bottom: 20px;
+    right: 20px;
+    align-items: flex-end;
+}
+
+
+.toast {
+    min-width: 280px;
+    max-width: 350px;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    opacity: 0;
+    transform: translateY(100%); /* تغییر جهت به پایین */
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    overflow: hidden;
+    text-align: right;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0); /* نمایش از پایین به بالا */
+}
+
+.toast.hide {
+    opacity: 0;
+    transform: translateY(100%); /* ناپدید شدن به پایین */
+}
+
+
+
+.toast-title {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.toast-message {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.toast-progress {
+    position: absolute;
+    bottom: 0;
+    right: 0; /* Changed from left to right for RTL */
+    height: 3px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.toast-progress-bar {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    transform-origin: right; /* Changed from left to right for RTL */
+}
+
+.toast-close {
+    position: absolute;
+    top: 10px;
+    left: 10px; /* Changed from right to left for RTL */
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+    .toast-close:hover {
+        opacity: 1;
+    }
