@@ -93,7 +93,8 @@ showToast(message, color = 'info', title = null, duration = 5000, position = 'bo
 
 ## Demo
 
-![Demo Screenshot](https://raw.githubusercontent.com/kavehnorozi/ToastNotificationJs/main/demo/demo-screenshot.png)
+![image](https://github.com/user-attachments/assets/e726c220-7df3-4b53-8a7a-30f384deab70)
+
 
 Check the [live demo](https://kavehnorozi.github.io/ToastNotificationJs/) for examples.
 
